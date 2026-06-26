@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Reservas de Hoteles</title>
+    <link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./main.js" defer></script>
+
+</head>
+<body>
+
+    <header>
+        <h1>🏨 Simulador de Reservas de Hoteles</h1>
+        <p>Encuentra el hotel ideal para tus vacaciones</p>
+    </header>
+
+    <main>
+
+        <!-- Filtros de búsqueda y ordenamiento -->
+
+        <section id="filtros">
+            <h2>Buscar hoteles</h2>
+
+            <input
+                type="text"
+                id="buscador"
+                placeholder="Buscar por nombre..."
+            >
+
+            <select id="filtroCiudad">
+                <option value="">Todas las ciudades</option>
+            </select>
+
+            <select id="ordenPrecio">
+                <option value="">Ordenar por precio</option>
+                <option value="asc">Menor a mayor</option>
+                <option value="desc">Mayor a menor</option>
+            </select>
+        </section>
+
+        <section>
+            <h2>Hoteles disponibles</h2>
+
+            <div id="contenedorHoteles">
+                
+            </div>
+        </section>
+
+     
+        <section id="reserva">
+            <h2>Mi Reserva</h2>
+
+            <div id="carritoReserva">
+                <p>No hay reservas seleccionadas.</p>
+            </div>
+
+            <h3>Total: USD <span id="totalReserva">0</span></h3>
+
+            <button id="confirmarReserva">
+                Confirmar Reserva
+            </button>
+        </section>
+
+   
+        <section id="estadisticas">
+            <h2>Información</h2>
+
+            <p>
+                Hoteles encontrados:
+                <span id="cantidadHoteles">0</span>
+            </p>
+
+            <p>
+                Reservas realizadas:
+                <span id="cantidadReservas">0</span>
+            </p>
+        </section>
+
+    </main>
+
+ 
+</body>
+</html>

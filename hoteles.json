@@ -1,0 +1,51 @@
+[
+  
+  {
+    "id": 1,
+    "nombre": "Hixton Playa Azul",
+    "ciudad": "Punta del Este",
+    "precio": 120,
+    "estrellas": 4,
+    "imagen": "img/hotel1.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Hixton Costanera",
+    "ciudad": "Montevideo",
+    "precio": 95,
+    "estrellas": 3,
+    "imagen": "img/hotel2.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Hixton Las Sierras",
+    "ciudad": "Piriápolis",
+    "precio": 140,
+    "estrellas": 5,
+    "imagen": "img/hotel3.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Hixton Laguna Resort",
+    "ciudad": "Laguna de Rocha",
+    "precio": 180,
+    "estrellas": 5,
+    "imagen": "img/hotel4.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Hixton Termas",
+    "ciudad": "Termas del Daymán",
+    "precio": 85,
+    "estrellas": 3,
+    "imagen": "img/hotel5.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Hixton Brisas del Mar",
+    "ciudad": "La Paloma",
+    "precio": 110,
+    "estrellas": 4,
+    "imagen": "img/hotel6.jpg"
+  }
+]
