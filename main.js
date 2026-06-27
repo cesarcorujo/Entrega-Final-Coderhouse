@@ -58,6 +58,8 @@ function reservarHotel(id){
 
     reserva.push(hotel);
 
+    localStorage.setItem("reserva", JSON.stringify(reserva));
+
     actualizarReserva();
 
 }
@@ -170,7 +172,7 @@ botonConfirmar.addEventListener("click", () => {
 
         Swal.fire({
             title: "No hay hoteles seleccionados",
-            text: "Agrega al menos un hotel a tu reserva.",
+            text: "Agrega un hotel antes de confirmar.",
             icon: "warning"
         });
 
@@ -178,8 +180,10 @@ botonConfirmar.addEventListener("click", () => {
 
         Swal.fire({
             title: "¡Reserva realizada!",
-            text: "Gracias por elegir nuestro sitio.",
+            text: "Gracias por reservar con nosotros.",
             icon: "success"
+        }).then(() => {
+            window.location.href = "carrito.html";
         });
 
     }
