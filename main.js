@@ -1,10 +1,16 @@
+// Obtengo los elementos del HTML que voy a utilizar
+
 const contenedorHoteles = document.getElementById("contenedorHoteles");
 const buscador = document.getElementById("buscador");
 const filtroCiudad = document.getElementById("filtroCiudad");
 const ordenarPrecio = document.getElementById("ordenPrecio");
 
+// Arrays donde guardo los hoteles y la reserva del usuario
+
 let hoteles = [];
 let reserva = [];
+
+// Cargo los hoteles desde el archivo JSON
 
 async function cargarHoteles() {
 
@@ -21,6 +27,8 @@ async function cargarHoteles() {
 }
 
 cargarHoteles();
+
+// Función para mostrar los hoteles en la página
 
 function mostrarHoteles(lista) {
 
@@ -48,9 +56,13 @@ function mostrarHoteles(lista) {
 
     });
 
+     // Actualizo la cantidad de hoteles mostrados
+
     document.getElementById("cantidadHoteles").textContent = lista.length;
 
 }
+
+// Agrego un hotel a la reserva
 
 function reservarHotel(id){
 
@@ -63,6 +75,8 @@ function reservarHotel(id){
     actualizarReserva();
 
 }
+
+// Calculo el total de la reserva y actualizo los contadores
 
 function actualizarReserva(){
 
@@ -80,11 +94,8 @@ function actualizarReserva(){
 
 }
 
-const total = reserva.reduce((acumulador, hotel)=>{
 
-    return acumulador + hotel.precio;
-
-},0);
+// Busco hoteles por nombre
 
 buscador.addEventListener("input", ()=>{
 
@@ -150,9 +161,9 @@ ordenarPrecio.addEventListener("change", ()=>{
 
 });
 
-localStorage.setItem("reserva", JSON.stringify(reserva));
 
 
+// Recupero la reserva guardada en LocalStorage
 
 const datos = localStorage.getItem("reserva");
 
@@ -163,6 +174,8 @@ if(datos){
     actualizarReserva();
 
 }
+
+// Confirmo la reserva utilizando SweetAlert
 
 const botonConfirmar = document.getElementById("confirmarReserva");
 
@@ -189,3 +202,4 @@ botonConfirmar.addEventListener("click", () => {
     }
 
 });
+

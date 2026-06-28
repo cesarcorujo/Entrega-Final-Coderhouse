@@ -14,7 +14,36 @@ function mostrarCarrito(carrito) {
         `;  
         contenedor.appendChild(card);
     }
+    const total = carrito.reduce((acumulador, hotel) => {
+        return acumulador + hotel.precio;
+    }, 0);
+
+    const totalHTML = document.createElement("h2");
+    totalHTML.textContent = `Total de la reserva: USD ${total}`;
+
+    contenedor.appendChild(totalHTML);
+
 }
 
+
+
 mostrarCarrito(carrito);
+
+const botonFinalizar = document.getElementById("finalizarReserva");
+
+botonFinalizar.addEventListener("click", () => {
+
+    Swal.fire({
+        title: "¡Reserva finalizada!",
+        text: "Gracias por elegir Hixton Hoteles.",
+        icon: "success"
+    }).then(() => {
+
+        localStorage.removeItem("reserva");
+
+        window.location.href = "index.html";
+
+    });
+
+});
 
